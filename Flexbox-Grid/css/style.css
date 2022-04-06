@@ -2,13 +2,20 @@
 :root{
     --dark: #101010;
     --white: #fff;
-    --upcolor: #37f482;
+    --dark-white: rgba(255,255,255,0.8);
+    /*--upcolor: #37f482;*/
+    --upcolor: #548CFF;
+    --oncolor: #D82148;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', Arial;
+}
+::selection{
+    color: var(--upcolor);
+    background-color: var(--dark);
 }
 .bg-dark{
     background-color: var(--dark);
@@ -35,13 +42,153 @@ header .nav-links ul{
 }
 header .nav-links li{
     margin: 0 10px;
+    list-style: none;
 }
 .nav-links li a{
     color: var(--white);
+    padding: 6px;
+    font-size: 15px;
     text-decoration: none;
     transition: 1s;
+}
+.nav-links li a.active-link:hover{
+    color: var(--oncolor);
+}
+.nav-links li a.active{
+    color: var(--upcolor);
 }
 .nav-links li a:hover{
     color: var(--upcolor);
 }
+.nav-links li a.active:hover{
+    color: var(--oncolor);
+}
+.hero{
+    background-image: url('../img/ArcadeofColonnade.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: fixed;
+    height: calc(100vh - 56px);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+ .hero .hero-shadow{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 4px 12px;
+    text-align: center;
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+.hero-shadow h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--oncolor);
+}
 
+.hero .hero-shadow p{
+    color: var(--dark-white);
+    font-size: 16px;
+    font-weight: 400;
+}
+.btn{
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 16px;
+    margin: 5px 15px;
+    border-radius: 4px 8px;
+    color: var(--dark);
+    background-color: var(--oncolor);
+    border: 2px solid transparent;
+    transition: 0.7s;
+}
+.btn-dark{
+    background-color: var(--dark);
+    color: var(--oncolor);
+}
+.btn:hover{
+    border: 2px solid var(--dark);
+}
+.btn-dark:hover{
+    border: 2px solid var(--oncolor);
+}
+main h1{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 20px auto;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /*grid-template-rows: 280px;*/
+    width: 98%;
+    gap: 10px;
+    margin: auto;
+}
+.gallery .article-card{
+    border-radius: 4px;
+    position: relative;
+}
+.gallery .article-card .article-title{
+    color: var(--upcolor );
+    width: 98%;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 25px;
+    text-align: center;
+    background-color: #101010;
+}
+.gallery .article-card h1 :not(.article-title){
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    top: 25px;
+}
+.gallery .article-card p{
+    font-size: 13px;
+    font-weight: 300;
+    word-wrap: break-word;
+    word-break:break-all;
+}
+.gallery .article-card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+
+/*Media*/
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .gallery{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media screen and (max-width: 576px) {
+    .gallery{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .article-card{
+        grid-column: span 1;
+        height: 32vh;
+    }
+    .hero{
+        height: calc(100vh - 110px);
+    }
+    header{
+        height: 110px;
+    }
+    header nav{
+        flex-direction: column;
+    }
+    footer{
+        flex-direction: column;
+    }   
+}

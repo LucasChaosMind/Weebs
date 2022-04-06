@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, Helvetica;
+}
+body{
+    color: #878787;
+}
+.flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.mb-2{
+    margin-bottom: 0.5rem;
+}
+.mr-2{
+    margin-right: 0.5rem;
+}
+.w-100{
+    width: 100%;
+}
+input, textarea, select{
+    border: none;
+    background-color: #e5e5e5;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+}
+input[type="submit"]{
+    background-color: #fdc903;
+    padding: 0.5rem;
+}
+input[type="radio"]{
+    appearance: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+}
+input[type="radio"]::before{
+    content: '';
+    background-color: gray;
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+}
+input[type="radio"]:checked::before{
+    opacity: 1;
+}
+input[type="radio"]:focus{
+    box-shadow: 0 0 5px #ababab;
+}

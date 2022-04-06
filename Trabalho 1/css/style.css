@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+/*
+-- Feito por Lucas C. Bresolino
+-- Faltou a resposividade/resposabildiade por conta do meu tempo estar escasso
+-- Termino 2 AM
+*/ 
+:root{
+    --yellow: #ffff00;
+    --yback:  #ffa500;
+    --bgback: #404040;
+    --bgwhite: #eee;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 	10px;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial;
+}
+html{
+    
+    background-color: #e3e3e3;
+}
+::selection{
+    background-color: var(--bgback);
+    color: var(--yback);
+}
+
+/*header*/
+header{
+    width: 100%;
+    height: 50px;
+}
+header nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--yellow);
+}
+header nav .logo img{
+    width: 50px;
+    height: 50px;
+}
+header nav{
+    padding: 0 25px;
+}
+header nav .nav-links{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+.nav-links li a{
+    margin: 0 15px;
+    padding: 15px 5px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.nav-links li a:hover{
+    background-color: var(--yback);
+    color: #fff;
+}
+/*Fim Header*/
+
+/*Section Banner*/
+.banner{
+    height: 35vh;
+    width: 100%;
+    background-color: var(--bgwhite);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    padding: 0 5px;
+    margin: 20px 0 25px;
+}
+.banner .banner-item{
+    border-radius: 6px;
+    box-shadow: 0 0 8px #00000073;
+    padding: 15px;
+}
+.banner .banner-item .top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.banner-item .banner-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    
+}
+.banner-item .top .banner-text span{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.color-yellow{
+    color: var(--yback);
+    text-shadow: 0 0 1px var(--yback);
+}
+.banner .banner-item p{
+    font-size: 1.1rem;
+}
+/*Section Banner*/
+
+/*Aside Talk*/
+.talk{
+    width: 100%;
+    height: 50px;
+    background-color: var(--bgback);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.talk .talk-text{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--bgwhite);   
+}
+.talk .talk-text span{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+/*Aside Talk*/
+
+/*Section Products*/
+.products{
+    margin: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 60px);
+}
+.products .product-item{
+    height: 31%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.product-item .product-img{
+    position: relative;
+    height: 100%;
+    flex-basis: 35%;
+}
+.product-item .product-img .product-name{
+    position: absolute;
+    bottom: 15px;
+    width: 50%;
+    background-color: var(--yback);
+    font-size: 1.3rem;
+    font-weight: 400;
+    z-index: 1000;
+    transition: 1.5s;
+}
+.product-item .product-name:hover{
+    width: 100%;
+}
+.product-item .product-img img{
+    max-width: 100%;
+}
+.products .product-desc{
+    height: 100%;
+    flex-basis: 65%;
+    padding: 10px;
+}
+.product-desc .title-product{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: var(--bgback);
+}
+.product-desc p{
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding: 8px 0;
+    margin-bottom: 15px;
+}
+/*Fim Section Products*/
+
+/*Botão padrao*/
+.btn{
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 4px 8px;
+    margin: 10px 5px;
+    border-radius: 4px 8px;
+    background-color: var(--yellow);
+    color: #000;
+    transition: 0.5s;
+}
+.btn:hover{
+    background-color: var(--yback);
+    color: #fff;
+    margin-left: 15px;
+}
+/*Botão padrao*/
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 3rem;
+    background-color: var(--bgback);
+    min-height: 20vh;
+}
+.on{
+    text-align: center;
+    flex-basis: 18%;
+}
+.title-footer{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--yback);
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+.market p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--bgwhite);
+}
+.ul{
+    list-style: none;
+}
+.links{
+    display: block;
+    text-align: center;
+    padding: 2px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #e3e3e3;
+    border-radius: 8px 4px;
+}
+.links:hover{
+    color: #fff;
+    background-color: var(--yback);
+}
+.ul-social{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0 8px;
+}
+.ul-social li a .fa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    color: #e3e3e3;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.ul-social li a .fa:hover{
+    background-color: var(--yback);
+    color: #fff;
+}
+.btn-submit{
+    border: none;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 2px 8px;
+    border-radius: 4px 6px;
+    color: var(--bgwhite);
+    background-color: var(--yback);
+}

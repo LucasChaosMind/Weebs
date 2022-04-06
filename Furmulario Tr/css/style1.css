@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial;
+}
+.form-main{
+    width: 620px;
+    margin: 0 auto;
+    background-color: #eee;
+}
+.text-main{
+    width: 100%;
+    background-color: #303030;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    color: #eee;
+    border-radius: 15px 15px 0 0 ;
+}
+.text-main h3 , .text-main h4{
+    color: #eee;
+    font-weight: 300;
+}
+.text-main h3 {
+    font-size: 0.8rem;
+}
+.text-main h4{
+    font-size: 0.65rem;
+}
+.area{
+    width: 94%;
+    margin: 10px auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+} 
+.title{
+    width: 100%;
+    display: flex;
+}
+.title .num{
+    background-color: #e929de;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+.title h1{
+    margin-left: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #303030;
+}
+.item{
+    width: 100%;
+    display: flex;
+}
+input{
+    flex-basis: 75%;
+    border: none;
+    border-radius: 4px;
+}
+label{
+    flex-basis: 20%;
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #111;
+    text-transform: capitalize;
+}
+#password{
+    width: 35%;
+}
+#date{
+    width: fit-content;
+    height: 30px;
+}
+.declaration .idade{
+    margin: 0 10px;
+}
+input[type="checkbox"]{
+    appearance: none ;
+    margin: 0 10px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    box-shadow: 0 1px 2px #333;
+}
+textarea{
+    width: 95%;
+    margin: auto;
+    resize: none;
+    border-radius: 6px;
+}
+.interesses{
+    display: flex;
+    flex-direction: column;
+}
+.interesses select{
+    border-radius: 4px;
+    border: 1px solid #e929de;
+}
+#enviar{
+    background-color: #333;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-weight: 300;
+    border-radius: 0 0 10px 10px;
+    color: #eee;
+}
+#enviar:hover{
+    color: #e929de;
+}
+
